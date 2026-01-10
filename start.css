@@ -71,7 +71,6 @@ a:focus
     image-rendering: optimize-contrast;
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
-    width: 100%;
     max-width: 320px;
     width: 320px;
     height: 180px;
