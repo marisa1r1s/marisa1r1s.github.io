@@ -5,205 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="icon.png" type="image/png">
-    <title>MARISA (1r1s.gg)</title>
-    <style type="text/css">
-    <!--
-        html, body
-        {
-          width:100%;
-          height:100%;
-          background:#010101;
-          overflow-x:hidden;
-        }
-        body
-        {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          width:100vw;
-          height:100vh;
-          min-height:100vh;
-          margin:0 0 0 0;
-          color:#eee;
-          font-family:monospace;
-          font-size:100%;
-        }
-        #wrapper
-        {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          flex-basis:100%;
-          flex-direction:column;
-        }
+    <link rel="stylesheet" href="start.css" type="text/css">
+    <title>MARISA [start.1r1s.gg]</title>
 
-        #canvas-wrapper
-        {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          padding:0px 0px 0px 0px;
-          flex-wrap:wrap;
-          flex-basis:100%;
-          width:320px;
-          height:180px;
-          min-height:180px;
-          max-width:320px;
-          background:#121212;
-        }
-        #canvas, #static-logo
-        {
-          display:block;
-          background:#121212;
-          image-rendering:pixelated;
-          width:100%;
-          max-width:320px;
-          width:320px;
-          height:180px;
-
-        }
-        #search-wrapper
-        {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          padding:4px 0px 4px 0px;
-          flex-wrap:wrap;
-          flex-basis:100%;
-        }
-        #search
-        {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          flex-wrap:wrap;
-        }
-        #q
-        {
-          margin:4px 0px 4px 0px;
-          padding:4px 4px 4px 4px;
-          width:100%;
-          max-width:320px;
-          min-height:32px;
-          font-family:monospace;
-          background:#232323;
-          color:#ffffff;
-          outline:1px inset #b00b69;
-          border:0 none;
-        }
-        #submit
-        {
-          margin:8px auto 8px auto;
-          padding:4px 4px 4px 4px;
-          background:#232323;
-          color:#ffffff;
-          outline:1px inset #b00b69;
-          border:0 none;
-        }
-        #submit:hover
-        {
-          cursor:pointer;
-        }
-
-        #submit:active
-        {
-          background:#121212;
-          outline:1px outset #b00b69;
-          border:0 none;
-        }
-    -->
-    </style>
-    <script type="text/javascript">
-    <!--
-          var canvas = null;
-          var ctx = null;
-          var cw = 320;
-          var ch = 180;
-          var w = 120;
-          var h = 27;
-          var x = getRandom(1, cw - w - 1);
-          var y = getRandom(1, ch - h - 1);
-          var xDelta = 1;
-          var yDelta = 1;
-          var m = new Image(w, h);
-          m.src = "m.png";
-
-          function getRandom(min, max)
-          {
-            var minCeiled = Math.ceil(min);
-            var maxFloored = Math.floor(max);
-            return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-          }
-
-          function DOMLoaded()
-          {
-            var canvasWrapper = document.getElementById("canvas-wrapper");
-            if(canvasWrapper)
-            {
-              var staticLogo = document.getElementById("static-logo");
-              if(staticLogo)
-              {
-                staticLogo.remove();
-              }
-            }
-          }
-
-          function main()
-          {
-            canvas = document.createElement("canvas");
-            if(canvas)
-            {
-              var canvasWrapper = document.getElementById("canvas-wrapper");
-              if(canvasWrapper)
-              {
-                canvas.id = "canvas";
-                canvas.width = cw;
-                canvas.height = ch;
-                canvasWrapper.appendChild(canvas);
-                ctx = canvas.getContext("2d");
-                if(ctx)
-                {
-                requestAnimationFrame(draw);
-                }
-              }
-            }
-
-          }
-
-          function clear()
-          {
-            ctx.fillStyle = "#121212";
-            ctx.fillRect(0, 0, cw, ch);
-          }
-
-          function draw()
-          {
-            clear();
-            x += xDelta;
-            y += yDelta;
-            if(x + w >= cw || x <= 0)
-            {
-              xDelta *= -1;
-            }
-
-            if(y + h >= ch || y <= 0)
-            {
-              yDelta *= -1;
-            }
-            ctx.drawImage(m, x, y);
-            requestAnimationFrame(draw);
-          }
-
-          addEventListener("load", function() { main(); });
-          addEventListener("DOMContentLoaded", function() { DOMLoaded(); });
-          /*
-          function resize()
-          {
-
-          }
-          addEventListener("resize", function() { resize(); });
-          */
-        //-->
+    <script type="text/javascript" src="bounce-animation.js">
     </script>
   </head>
   <body>
@@ -216,6 +21,10 @@
           <input type="text" id="q" name="q" autofocus placeholder="Enter your search terms here...">
           <button type="submit" id="submit">Search the internet!</button>
         </form>
+      </div>
+      <div id="footer-wrapper">
+        <p><a href="https://1r1s.gg/"><img src="https://1r1s.gg/me.jpg" id="me" alt="A joyful, smiling trans woman, with long, brown hair, standing in a snow-covered park on a cold day. There are also several trees, a park bench, and a lake in the background behind her. She is wearing several colorful hats, several colorful scarfs, and eyeglasses with purple frames." title="A joyful, smiling trans woman, with long, brown hair, standing in a snow-covered park on a cold day. There are also several trees, a park bench, and a lake in the background behind her. She is wearing several colorful hats, several colorful scarfs, and eyeglasses with purple frames."></a></p>
+        <p><a href="https://1r1s.gg/">1r1s.gg: the personal website of Marisa Marion Mackenzie</a></p>
       </div>
     </div>
   </body>
