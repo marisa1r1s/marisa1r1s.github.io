@@ -9,14 +9,10 @@ body
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
-    min-height: 100vh;
     margin: 0 0 0 0;
-    color: #eee;
+    color: #eeeeee;
     font-family: monospace;
     font-size: 1.1em;
 }
