@@ -11,34 +11,97 @@
         {
           width:100%;
           height:100%;
-          background:#000000;
-          overflow:hidden;
+          background:#010101;
+          overflow-x:hidden;
         }
         body
         {
-          margin:0 0 0 0;
           display:flex;
           justify-content:center;
           align-items:center;
+          width:100vw;
+          height:100vh;
+          min-height:100vh;
+          margin:0 0 0 0;
           color:#eee;
           font-family:monospace;
           font-size:100%;
         }
-        #canvas
+        #wrapper
         {
-          dislay:block;
-          background:#121212;
-          position:absolute;
-          left:0;
-          top:0;
-          image-rendering:pixelated;
-          width:100%;
-          width:100vw;
-          height:100%;
-          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          flex-basis:100%;
+          flex-direction:column;
         }
 
+        #canvas-wrapper
+        {
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding:8px 0px 8px 0px;
+          flex-wrap:wrap;
+          flex-basis:100%;
+        }
+        #canvas
+        {
+          background:#121212;
+          image-rendering:pixelated;
+          width:100%;
+          max-width:320px;
+          height:auto;
+        }
+        #search-wrapper
+        {
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding:4px 0px 4px 0px;
+          flex-wrap:wrap;
+          flex-basis:100%;
+        }
+        #search
+        {
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          flex-wrap:wrap;
+        }
+        #q
+        {
+          margin:4px 0px 4px 0px;
+          padding:4px 4px 4px 4px;
+          width:100%;
+          max-width:320px;
+          min-height:32px;
+          font-family:monospace;
+          background:#232323;
+          color:#ffffff;
+          outline:1px inset #b00b69;
+          border:0 none;
+        }
+        #submit
+        {
+          margin:8px auto 8px auto;
+          padding:4px 4px 4px 4px;
+          background:#232323;
+          color:#ffffff;
+          outline:1px inset #b00b69;
+          border:0 none;
+        }
+        #submit:hover
+        {
+          cursor:pointer;
+        }
 
+        #submit:active
+        {
+          background:#121212;
+          outline:1px outset #b00b69;
+          border:0 none;
+        }
     </style>
     <script type="text/javascript">
           var canvas = null;
@@ -106,7 +169,16 @@
     </script>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
-        <noscript>Hey, sorry about the Javascript BS, the whole darn page is just a Javascript animation with the name 'MARISA' floating around the screen! Kinda like the 'DVD' logo bouncing animation on DVD players, ya know?! Maybe? Anyway...</noscript>
+    <div id="wrapper">
+      <div id="canvas-wrapper">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="search-wrapper">
+        <form action="https://search.1r1s.gg/search" method="POST" id="search" target="_blank">
+          <input type="text" id="q" name="q" autofocus placeholder="Enter your search terms here...">
+          <button type="submit" id="submit" formtarget="_blank">Search the internet!</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
