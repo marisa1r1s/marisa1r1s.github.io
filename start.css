@@ -1,3 +1,8 @@
+*
+{
+    box-sizing: border-box;
+}
+
 html,
 body
 {
@@ -10,8 +15,8 @@ body
 body
 {
     width: 100vw;
-    height: 100vh;
     margin: 0 0 0 0;
+    padding: 15vh 0 15vh 0;
     color: #eeeeee;
     font-family: monospace;
     font-size: 1.1em;
@@ -67,6 +72,7 @@ a:focus
     image-rendering: optimize-contrast;
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
+    width: 100%;
     max-width: 320px;
     width: 320px;
     height: 180px;
